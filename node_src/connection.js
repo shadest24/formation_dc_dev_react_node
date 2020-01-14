@@ -1,4 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
+var config = require("./config")
 
 const connect = () => {
 
@@ -7,7 +8,7 @@ const connect = () => {
 
   return new Promise((resolve, reject) => {
 
-    MongoClient.connect('mongodb://mongo:27017', function (err, client) {
+    MongoClient.connect(config.mongodb.url, function (err, client) {
       if (err) {
         reject(err)
       }

@@ -25,7 +25,7 @@ app.get('/todo', async (req, res) => {
 })
 
 
-app.listen(3000, function () {
+app.listen(config.port, function () {
   console.log('Example app listening on port 3000!')
 })
 
