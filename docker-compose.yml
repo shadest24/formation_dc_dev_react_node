@@ -6,7 +6,7 @@ services:
     user: node
     command: bash -c "chmod -R 744 ./ && npm install && npm start"
     ports:
-    - "3001:3000"
+    - "3001:3001"
     volumes:
     - ./node_src:/home/node/app
     working_dir: /home/node/app
