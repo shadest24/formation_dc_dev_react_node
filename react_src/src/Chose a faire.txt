@@ -1,0 +1,11 @@
+Liste des choses a faire :
+- bouton ajouter une tache qui ouvre (dans une currentPageList) la liste
+    - afiche le titre de la tache
+    - affiche les taches et les options de modif
+    - input de tache
+
+- Menu slider (bas gauche) qui apparrait lorsqu'on clique dessus
+    - lien vers les listes, le profil/connexion
+
+- page profil qui s'ouvre si clique sur profil et deja connecter
+    - marque le nom de connection a la place de mon compte
