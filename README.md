@@ -23,7 +23,7 @@ module.exports = {
     port: "3001"
 }
 ```
-9. lancer `npm start` dans `react_src/` et dans `node_src/`
+8. lancer `npm start` dans `react_src/` et dans `node_src/`
 
 
 #Linux et MacOS
