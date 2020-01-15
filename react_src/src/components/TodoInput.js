@@ -13,7 +13,7 @@ class TodoInput extends React.Component {
     return (
       <div className="input">
         <input
-          placeholder="Ajouter une tache"
+          placeholder="Ajouter une Liste"
           value={this.state.inputValue}
           onChange={e => {
             this.setState({ inputValue: e.target.value });
