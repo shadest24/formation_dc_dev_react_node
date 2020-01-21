@@ -12,20 +12,20 @@ class TodoInput extends React.Component {
   render() {
     return (
       <div className="input">
-        <input
+        <input className="text"
           placeholder="Ajouter une Liste"
           value={this.state.inputValue}
           onChange={e => {
             this.setState({ inputValue: e.target.value });
           }}
         />
-        <button
+        <button className="button"
           onClick={() => {
             this.props.addItem(this.state.inputValue);
             this.setState({ inputValue: "" });
           }}
         >
-          Add
+          Ajouter
         </button>
       </div>
     );
