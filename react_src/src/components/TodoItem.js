@@ -4,7 +4,9 @@ import "./TodoItem.css";
 class TodoItem extends React.Component {
   render() {
     return (
-      <li>
+      <li onClick={() => {
+        console.log("j'ai clicker sur une liste")
+      }}>
         <div className="Titre_Li">
         {this.props.item.titre} 
         </div>
@@ -12,14 +14,16 @@ class TodoItem extends React.Component {
         {this.props.item.isDone ? "Fini" : "En cours..."}
         </div>
         <button
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation()
             this.props.finish();
           }}
         >
           {this.props.item.isDone ? "Continuer" : "Terminer"}
         </button>
         <button
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation()
             this.props.remove();
           }}
         >

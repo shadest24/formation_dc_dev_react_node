@@ -13,7 +13,16 @@ class App extends React.Component {
       items: [
         {
           titre: "Faire les courses",
-          isDone: false
+          isDone: false,
+          taches: [
+            {
+            titre: "fromage",
+            isDone: false,
+            dateCreation: "01/01/2000",
+            dateFin: "01/01/3000",
+            order: 1
+            }
+          ]
         },
         {
           titre: "Faire le ménage",
@@ -47,7 +56,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.users)
+    console.log("Users : ",this.state.users)
     return (
       <div className="Todo">
         <TodoHeader setPage={page => this.setPage(page)} />
@@ -64,14 +73,10 @@ class App extends React.Component {
             connection={(user, pass) => {
               let i = 0;
               let userFound = false;
-              while (!(userFound) 
-                &&
-                i < this.state.users.length
-              ) {console.log(this.state.users, i, this.state.users[i], this.state.users.length);
-                if (this.state.users[i].user === user &&
-                  this.state.users[i].password === pass){
-                    userFound = true
-                  }
+              while (!(userFound) && i <  this.state.users.length) {
+                if (this.state.users[i].user === user && this.state.users[i].password === pass){
+                  userFound = true
+                }
                 i++;
               }
               if (i < this.state.users.length) {
@@ -80,7 +85,7 @@ class App extends React.Component {
                 this.setUsers(newusers);
                 console.log("log in");
               } else {
-                console.log("Erreur de saisie");
+                console.log("Error, identifiant/mdp non valide");
               }
             }}
           />

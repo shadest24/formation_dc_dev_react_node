@@ -5,7 +5,7 @@ import TodoItem from "./TodoItem";
 
 class TodoList extends React.Component {
   render() {
-    console.log(this.props.items);
+    console.log("Listes : ",this.props.items);
     return (
       <ul>
         {this.props.items.map((item, index) => {

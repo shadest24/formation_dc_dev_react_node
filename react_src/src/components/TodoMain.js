@@ -15,12 +15,8 @@ class TodoMain extends React.Component {
         <TodoInput
           addItem={value => {
             let newItem = { titre: value, isDone: false };
-
             let newItems = [...this.props.items, newItem];
-
             this.props.setItems(newItems);
-
-            console.log("newItem", newItem);
           }}
         />
         <TodoList
