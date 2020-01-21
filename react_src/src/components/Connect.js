@@ -25,7 +25,7 @@ class Connect extends React.Component {
         </div>
         <div className="Password_input">
           Password :
-          <input
+          <input type="password" name="password"
             placeholder="Ajouter Password"
             value={this.state.inputUserPassword}
             onChange={e => {
