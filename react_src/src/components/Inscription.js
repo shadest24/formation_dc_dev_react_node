@@ -1,4 +1,5 @@
 import React from "react";
+import "./Inscription.css";
 
 class Inscription extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class Inscription extends React.Component {
       <div className="Connect">
         <div>
           Identifiant :
-          <input
+          <input className="Ajouter_id"
             placeholder="Ajouter ID"
             value={this.state.inputUserName}
             onChange={e => {
@@ -26,24 +27,25 @@ class Inscription extends React.Component {
         </div>
         <div>
           Password :
-          <input
-            placeholder="Ajouter Password"
+          <input className="Password"
+            placeholder="Veuillez saisir votre mot de passe"
             value={this.state.inputUserPassword}
             onChange={e => {
               this.setState({ inputUserPassword: e.target.value });
             }}
           />
-          <input
-            placeholder="Password identique"
+          <div> Password :
+          <input className="Verif_mot_pass"
+            placeholder="Confirmer votre mot de passe"
             value={this.state.inputUserPasswordSame}
             onChange={e => {
               this.setState({ inputUserPasswordSame: e.target.value });
             }}
-          />
+          /></div>
         </div>
         <div>
-          Mail :
-          <input
+          Adresse mail :
+          <input className="Mail"
             placeholder="xxxx@xxx.xx"
             value={this.state.inputUserMail}
             onChange={e => {
@@ -53,7 +55,7 @@ class Inscription extends React.Component {
         </div>
         <div className="Inscription">
           <button
-            className="btn btn-primary btn-sm"
+            className="Bouton_inscription"
             onClick={() => {
               if (!(this.state.inputUserName === "" || this.state.inputUserPassword === "" || this.state.inputUserPasswordSame === "" || this.state.inputUserMail === "") & (this.state.inputUserPassword === this.state.inputUserPasswordSame)) {
                   this.props.inscription(

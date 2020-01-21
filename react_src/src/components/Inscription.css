@@ -1,0 +1,39 @@
+.Connect{
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: darkgoldenrod;   
+}
+.Ajouter_id{
+    padding: 10px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Password{
+    padding: 10px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Verif_mot_pass{
+    padding: 10px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Mail{
+    padding: 10px;    
+    width: 90%;
+    margin-top: 20px;
+    
+}
+.Bouton_inscription{
+    padding: 10px;
+    background-color: slategray;
+    border-radius: 100px;
+    width: 60%;
+   margin-left: 20%;
+   margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -13,7 +13,7 @@ class Connect extends React.Component {
   render() {
     return (
       <div className="Connect">
-        <div>
+        <div className="Id_input">
           Identifiant :
           <input
             placeholder="Ajouter ID"
@@ -23,7 +23,7 @@ class Connect extends React.Component {
             }}
           />
         </div>
-        <div>
+        <div className="Password_input">
           Password :
           <input
             placeholder="Ajouter Password"
