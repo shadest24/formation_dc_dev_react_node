@@ -7,5 +7,7 @@ Liste des choses a faire :
 - Menu slider (bas gauche) qui apparrait lorsqu'on clique dessus
     - lien vers les listes, le profil/connexion
 
+- page d'inscription si clique sur signIn
+
 - page profil qui s'ouvre si clique sur profil et deja connecter
     - marque le nom de connection a la place de mon compte

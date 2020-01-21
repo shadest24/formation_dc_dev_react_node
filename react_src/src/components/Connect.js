@@ -37,16 +37,25 @@ class Connect extends React.Component {
           <button
             className="btn btn-primary btn-sm"
             onClick={() => {
-              this.props.connection(
-                this.state.inputUserName,
-                this.state.inputUserPassword
-              );
-              this.props.setPage("Todo");
+              if (!(this.state.inputUserName === "" || this.state.inputUserPassword === "")){
+                this.props.connection(
+                  this.state.inputUserName,
+                  this.state.inputUserPassword
+                );
+                this.props.setPage("Todo");
+              }else{
+                console.log("Error !! pas de texte dans les champs de connexion")
+              }
             }}
           >
             Log In
           </button>
-          <button className="btn btn-primary btn-sm">Sign In</button>
+          <button 
+          className="btn btn-primary btn-sm"
+          onClick={() => {
+            this.props.setPage("Inscription");
+          }}
+          >Sign In</button>
         </div>
       </div>
     );

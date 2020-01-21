@@ -3,6 +3,7 @@ import "./App.css";
 import TodoHeader from "./components/TodoHeader";
 import TodoMain from "./components/TodoMain";
 import Connect from "./components/Connect";
+import Inscription from "./components/Inscription";
 
 class App extends React.Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class App extends React.Component {
       ]
     };
   }
-  setEstConnecter(newusers) {
+  setUsers(newusers) {
     this.setState({ users: newusers });
   }
   setPage(page) {
@@ -46,6 +47,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.users)
     return (
       <div className="Todo">
         <TodoHeader setPage={page => this.setPage(page)} />
@@ -55,29 +57,55 @@ class App extends React.Component {
             setItems={items => this.setState({ items: items })}
           />
         )}
+        
         {this.state.currentPage === "Connexion" && (
           <Connect
             setPage={page => this.setPage(page)}
             connection={(user, pass) => {
               let i = 0;
-              while (
-                !(
-                  this.state.users[i].user === user &&
-                  this.state.users[i].password === pass
-                ) &&
+              let userFound = false;
+              while (!(userFound) 
+                &&
                 i < this.state.users.length
-              ) {
+              ) {console.log(this.state.users, i, this.state.users[i], this.state.users.length);
+                if (this.state.users[i].user === user &&
+                  this.state.users[i].password === pass){
+                    userFound = true
+                  }
                 i++;
               }
               if (i < this.state.users.length) {
                 let newusers = [...this.state.users];
                 newusers[i].login = true;
-                this.setEstConnecter(newusers);
+                this.setUsers(newusers);
                 console.log("log in");
               } else {
                 console.log("Erreur de saisie");
               }
             }}
+          />
+        )}
+        {this.state.currentPage === "Inscription" && (
+          <Inscription
+            setPage={page => this.setPage(page)}
+            users={users=> this.state.users}
+            inscription={(userinscr,pass,mail) => {
+              let newuser = {
+                id: this.state.users.length + 1,
+                user: userinscr,
+                email: mail,
+                password: pass,
+                login: false
+              };
+              let newusers = [...this.state.users,newuser];
+              this.setUsers(newusers);
+              console.log("NewUsers",newusers);
+            }
+            }
+
+
+
+            users ={this.state.users}
           />
         )}
       </div>
