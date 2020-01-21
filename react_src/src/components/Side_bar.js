@@ -1,5 +1,5 @@
 import React from "react";
-import { bubble as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import "./Side_bar.css";
 
 class Side_bar extends React.Component {
