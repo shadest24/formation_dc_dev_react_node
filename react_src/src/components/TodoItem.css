@@ -1,0 +1,33 @@
+li{
+    font-size: 20px;
+    background-color:/* rgb(185, 167, 167);*/none;
+    width: 100%;
+    padding-top: 20px;
+    list-style-type: none;
+    
+
+ 
+}
+li button{
+   /*margin-left: 500px;*/
+    background-color: darkcyan;
+    font-size: 20px;
+    width: 33%;
+    margin-bottom: 15px;
+    padding: 5px;
+    margin-left: 15px;
+    
+    
+}
+li .Titre_Li{
+    border: cornsilk solid 2px;
+    background-color: cornsilk;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+li .En_cours{
+    padding: 10px;
+    text-align: end;
+    font-style: oblique;
+}

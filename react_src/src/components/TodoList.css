@@ -1,0 +1,10 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    flex-direction: column;
+    align-content: center;
+    border: oldlace dotted 1px;
+    margin-left: 37%;
+
+}
