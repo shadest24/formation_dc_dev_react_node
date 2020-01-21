@@ -27,7 +27,9 @@ class Inscription extends React.Component {
         </div>
         <div>
           Password :
-          <input className="Password"
+          <input 
+            type="password"
+            className="Password"
             placeholder="Veuillez saisir votre mot de passe"
             value={this.state.inputUserPassword}
             onChange={e => {
@@ -35,7 +37,9 @@ class Inscription extends React.Component {
             }}
           />
           <div> Password :
-          <input className="Verif_mot_pass"
+          <input 
+            type="password"
+            className="Verif_mot_pass"
             placeholder="Confirmer votre mot de passe"
             value={this.state.inputUserPasswordSame}
             onChange={e => {

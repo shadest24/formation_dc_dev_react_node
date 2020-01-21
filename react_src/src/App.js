@@ -16,12 +16,19 @@ class App extends React.Component {
           isDone: false,
           taches: [
             {
-            titre: "fromage",
-            isDone: false,
-            dateCreation: "01/01/2000",
-            dateFin: "01/01/3000",
-            order: 1
-            }
+              titre: "fromage",
+              isDone: false,
+              dateCreation: "01/01/2000",
+              dateFin: "01/01/3000",
+              order: 1
+            },
+            {
+              titre: "viande",
+              isDone: false,
+              dateCreation: "01/01/2000",
+              dateFin: "01/01/3000",
+              order: 2
+              }
           ]
         },
         {
@@ -29,7 +36,8 @@ class App extends React.Component {
           isDone: true
         }
       ],
-      currentPage: "Todo",
+      currentPage: "Connexion",
+      userLogIn: false,
       users: [
         {
           id: 1,
@@ -79,7 +87,8 @@ class App extends React.Component {
                 }
                 i++;
               }
-              if (i < this.state.users.length) {
+              i--
+              if (userFound) {
                 let newusers = [...this.state.users];
                 newusers[i].login = true;
                 this.setUsers(newusers);
@@ -107,10 +116,6 @@ class App extends React.Component {
               console.log("NewUsers",newusers);
             }
             }
-
-
-
-            users ={this.state.users}
           />
         )}
       </div>
