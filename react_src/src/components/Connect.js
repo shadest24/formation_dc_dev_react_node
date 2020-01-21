@@ -16,7 +16,7 @@ class Connect extends React.Component {
         <div className="Id_input">
           Identifiant :
           <input
-            placeholder="Ajouter ID"
+            placeholder="ID"
             value={this.state.inputUserName}
             onChange={e => {
               this.setState({ inputUserName: e.target.value });
