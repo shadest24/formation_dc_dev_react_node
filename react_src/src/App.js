@@ -93,8 +93,10 @@ class App extends React.Component {
                 newusers[i].login = true;
                 this.setUsers(newusers);
                 console.log("log in");
+                return true
               } else {
                 console.log("Error, identifiant/mdp non valide");
+                return false
               }
             }}
           />
