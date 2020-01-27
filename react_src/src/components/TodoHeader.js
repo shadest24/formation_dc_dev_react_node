@@ -11,7 +11,9 @@ class TodoHeader extends React.Component {
   render() {
     return (
       <div className="menu">
-        <Side_bar></Side_bar>
+        {/* <Side_bar 
+          setPage={cPage => this.props.setPage(cPage)}  
+        /> */}
         <div className="logo">
           <img
            /*src="http://download.seaicons.com/icons/paomedia/small-n-flat/1024/post-it-icon.png"
@@ -28,6 +30,7 @@ class TodoHeader extends React.Component {
             src="http://cdn.onlinewebfonts.com/svg/img_184513.png"
             alt="account"
           />
+          
           <p>Mon compte</p>
         </div>
       </div>

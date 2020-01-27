@@ -67,7 +67,8 @@ class Inscription extends React.Component {
                     this.state.inputUserPassword,
                     this.state.inputUserMail
                   );
-                  this.props.setPage("Todo");
+                  this.props.setPage("Connexion");
+                  console.log("User ajouter !")
               } else{
                 if (!(this.state.inputUserPassword === this.state.inputUserPasswordSame)) {
                   console.log("Error, password different")
