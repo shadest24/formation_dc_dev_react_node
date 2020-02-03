@@ -3,9 +3,6 @@ li{
     width: 100%;
     padding-top: 20px;
     list-style-type: none;
-    
-
- 
 }
 li button{
     background-color: darkcyan;
@@ -14,8 +11,7 @@ li button{
     margin-bottom: 15px;
     padding: 5px;
     margin-left: 15px;
-    
-    
+    border-radius: 10px;    
 }
 li .Titre_Li{
     border: cornsilk solid 2px;
@@ -23,9 +19,13 @@ li .Titre_Li{
     font-size: 16px;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 li .En_cours{
     padding: 10px;
     text-align: end;
     font-style: oblique;
+}
+.En_cours{
+    color: white;
 }
