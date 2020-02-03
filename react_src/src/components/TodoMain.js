@@ -32,6 +32,7 @@ class TodoMain extends React.Component {
             newItems.splice(index, 1);
             this.props.setItems(newItems);
           }}
+          redirect={this.props.redirect}
         />
       </div>
     );

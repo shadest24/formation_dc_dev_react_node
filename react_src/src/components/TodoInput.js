@@ -21,8 +21,13 @@ class TodoInput extends React.Component {
         />
         <button className="button"
           onClick={() => {
-            this.props.addItem(this.state.inputValue);
-            this.setState({ inputValue: "" });
+            if (!(this.state.inputUserName === ""))
+            {
+              this.props.addItem(this.state.inputValue);
+              this.setState({ inputValue: "" });
+            }else{
+              console.log("ERROR : champs vide !")
+            }
           }}
         >
           Ajouter

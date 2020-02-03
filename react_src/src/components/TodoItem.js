@@ -4,7 +4,8 @@ import "./TodoItem.css";
 class TodoItem extends React.Component {
   render() {
     return (
-      <li onClick={() => {
+      <li onClick={(e) => {
+        this.props.onClick(e)
         console.log("j'ai clicker sur une liste")
       }}>
         <div className="Titre_Li">

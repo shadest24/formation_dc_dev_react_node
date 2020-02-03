@@ -56,7 +56,10 @@ class App extends React.Component {
       ]
     };
   }
-  setUsers(newusers) {
+  setUserLogIn(user) {
+    this.setState({ userLogIn : user})
+  } 
+    setUsers(newusers) {
     this.setState({ users: newusers });
   }
   setPage(page) {
@@ -67,11 +70,14 @@ class App extends React.Component {
     console.log("Users : ",this.state.users)
     return (
       <div className="Todo">
-        <TodoHeader setPage={page => this.setPage(page)} />
+        <TodoHeader setPage={page => this.setPage(page)}
+          userLogIn={this.state.userLogIn}
+        />
         {this.state.currentPage === "Todo" && (
           <TodoMain
             items={this.state.items}
             setItems={items => this.setState({ items: items })}
+            redirect={page => this.setState({currentPage: page})}
           />
         )}
         
@@ -92,10 +98,12 @@ class App extends React.Component {
                 let newusers = [...this.state.users];
                 newusers[i].login = true;
                 this.setUsers(newusers);
+                this.setUserLogIn(newusers[i].user);
                 console.log("log in");
                 return true
               } else {
                 console.log("Error, identifiant/mdp non valide");
+                this.setUserLogIn("");
                 return false
               }
             }}

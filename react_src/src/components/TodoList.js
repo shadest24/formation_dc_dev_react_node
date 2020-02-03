@@ -18,6 +18,7 @@ class TodoList extends React.Component {
               remove={() => {
                 this.props.removeItem(index);
               }}
+              onClick={() => {this.props.redirect("Connexion")}}
             />
           );
         })}
