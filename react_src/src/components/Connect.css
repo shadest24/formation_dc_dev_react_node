@@ -7,28 +7,27 @@
   transform: translate(-50%, -50%);
   background-color: darkgoldenrod;
 }
-.LogIn {
-  display: flex;
-  padding-left: 20px;
-  margin-top: 15px;
-  width: 100%;
-  margin-top: 20px;
-}
+
 .LogIn button {
-  background-color: #fff;
+  background-color: slategray;
   color: #000;
-  margin-right: 20px;
-  width: 100%;
+  margin-right: 40px;
+  margin-left: 40px;
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 15px;;
 
 }
-.Id_input{
-  padding: 1px;
-  width: 100%;
-  margin-top: 20px;
-}
-.Password_input{
+.champ_motPasse{
   padding: 10px;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-left: 6px;
+  margin-bottom: 10px;
+
+}
+.champ_ID
+{
+  padding: 10px;
+  margin-left: 2px;
+  margin-bottom: 10px;
 }

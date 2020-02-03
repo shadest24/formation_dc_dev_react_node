@@ -14,8 +14,8 @@ class Connect extends React.Component {
     return (
       <div className="Connect">
         <div className="Id_input">
-          Identifiant :
-          <input
+          Identifiant :  
+          <input className="champ_ID"
             placeholder="ID"
             value={this.state.inputUserName}
             onChange={e => {
@@ -24,9 +24,10 @@ class Connect extends React.Component {
           />
         </div>
         <div className="Password_input">
-          Password :
-          <input type="password" name="password"
-            placeholder="Ajouter Password"
+          Password :  
+          <input className="champ_motPasse" 
+          type="password" name="password"
+            placeholder="Saisir mot de passe"
             value={this.state.inputUserPassword}
             onChange={e => {
               this.setState({ inputUserPassword: e.target.value });
