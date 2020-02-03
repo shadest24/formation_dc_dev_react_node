@@ -1,6 +1,7 @@
 .menu {
   display: flex;
   width: 100%;
+  height: 110px;
   flex-wrap: nowrap;
   text-align: center;
   justify-content: space-between;
@@ -13,7 +14,10 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .menu h1:hover {
-  color: #f0f;
+  padding-bottom: 20px;
+  transform: scale(1.4);
+  text-decoration: underline;
+  border-radius: 100px;
 }
 .logo {
   margin: 10px;
@@ -27,6 +31,8 @@
   justify-content: right;
   align-items: center;
   flex-direction: column;
+  margin-top: 30px;
+  margin-right: 50px;
 }
 .mon_compte img {
   width: 35px;
@@ -37,7 +43,4 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 12px;
   text-decoration: underline;
-}
-.mon_compte p :hover {
-  color: blue;
 }

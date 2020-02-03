@@ -26,7 +26,7 @@ class TodoHeader extends React.Component {
           className="mon_compte"
           onClick={() => this.props.setPage("Connexion")}
         >
-          <img
+          <img className="auth"
             src="http://cdn.onlinewebfonts.com/svg/img_184513.png"
             alt="account"
           />
