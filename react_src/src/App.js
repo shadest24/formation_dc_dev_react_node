@@ -3,6 +3,7 @@ import "./App.css";
 import TodoHeader from "./components/TodoHeader";
 import TodoMain from "./components/TodoMain";
 import Connect from "./components/Connect";
+import Profil from "./components/Profil";
 import Inscription from "./components/Inscription";
 
 class App extends React.Component {
@@ -37,7 +38,7 @@ class App extends React.Component {
         }
       ],
       currentPage: "Connexion",
-      userLogIn: false,
+      userLogIn: "",
       users: [
         {
           id: 1,
@@ -126,6 +127,25 @@ class App extends React.Component {
               console.log("NewUsers",newusers);
             }
             }
+          />
+        )}
+        {this.state.currentPage === "Profil" && (
+          <Profil
+            users={this.state.users}
+            redirect={page => {this.setState({currentPage: page});
+              this.setUserLogIn("");
+              let newusers = [...this.state.users];
+              let i = 0;
+              while (!(this.state.users[i].login)) {
+                if (this.state.users[i].login){
+                  newusers[i].login = false;
+                }
+                i++;
+              }
+              this.setUsers(newusers);
+              this.setUserLogIn(newusers[i].user);
+              console.log("log Out");
+            }}
           />
         )}
       </div>

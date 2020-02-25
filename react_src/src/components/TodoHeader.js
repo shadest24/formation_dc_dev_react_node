@@ -9,7 +9,7 @@ class TodoHeader extends React.Component {
   render() {
     let accountComponent = <p>Mon compte</p>
     let currentPage = "Connexion"
-    if(this.props.userLogIn != "") {
+    if(this.props.userLogIn !== "") {
       accountComponent = <p>{this.props.userLogIn}</p>
       currentPage = "Profil"
     }
@@ -19,11 +19,6 @@ class TodoHeader extends React.Component {
           {/* <Side_bar 
           setPage={(currrentPage) => {this.props.setPage(currentPage)}}  
         /> */}
-          <img
-           /*src="http://download.seaicons.com/icons/paomedia/small-n-flat/1024/post-it-icon.png"
-            href="#"
-            alt="logo"*/
-          />
         </div>
         <h1 onClick={() => this.props.setPage("Todo")}>★★ ToDoList ★★</h1>
         <div
